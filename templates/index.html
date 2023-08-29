@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BlockSport</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            background-color: #35424a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #35424a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #29373d;
+        }
+
+        h2 {
+            color: #35424a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Block Sport</h1>
+    <div class="container">
+        <form action="/predict" method="post">
+            <label for="team1">Team 1:</label>
+            <input type="text" id="team1" name="team1"><br>
+            
+            <label for="team2">Team 2:</label>
+            <input type="text" id="team2" name="team2"><br>
+
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
