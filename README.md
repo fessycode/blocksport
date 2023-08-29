@@ -1,1 +1,1 @@
-Block sport is a sport predicting platform that is integrate on blockchain.
+Block sport is a sport predicting platform that is integrated on blockchain.
